@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://netflix.github.io/falcor/build/falcor.browser.js"></script>
+    <script>
+      var model = new falcor.Model({
+        cache: {
+        todoList: [{
+          name: "Recently Viewed",
+          todos: [{
+            id: 12345,
+            name: "Watch Tuts Videos",
+            completed: false
+          }]
+        },
+        {
+         name: "Recently Added",
+         todos: [{
+           id: 98765,
+           name: "Get a great job",
+           completed: false
+         }]
+       }]
+     }}
+   );
+
+    model.getValue('todoList[1].todos[0].name')
+    .then(function(value) {
+      console.log(value);
+    });
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
